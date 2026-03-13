@@ -2,7 +2,7 @@ title: "Priyanti Das"
 description: "Grade 8 student in Dhaka, Bangladesh — activities, projects, awards, and blog."
 remote_theme: yaoyao-liu/minimal-light
 
-url: "" # set to https://YOUR_USERNAME.github.io after creating the repo
+url: "" # set to https://priyantidas.github.io after creating the repo
 baseurl: "" # no subpath for a user site
 
 lang: en
@@ -23,7 +23,7 @@ position: "Grade 8 student"
 affiliation: "Dhaka, Bangladesh"
 email: "your.email@example.com"
 
-github_link: "https://github.com/YOUR_USERNAME"
+github_link: "https://github.com/priyantidas"
 
 # Where posts live
 collections:
