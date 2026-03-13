@@ -1,0 +1,153 @@
+/* Basic CSS for the website */
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --text-color: #333;
+  --bg-color: #f4f4f4;
+  --border-color: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styles */
+.site-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-trigger {
+  display: none;
+}
+
+.trigger {
+  display: flex;
+  gap: 20px;
+}
+
+.page-link {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.page-link:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Main content styles */
+.page-content {
+  padding: 2rem 0;
+}
+
+/* Footer styles */
+.site-footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footer-col {
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+/* Content styles */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Blog post list */
+.post-list {
+  list-style: none;
+}
+
+.post-list li {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-list li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .site-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .trigger {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .page-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .nav-trigger {
+    display: block;
+    margin-left: auto;
+  }
+  
+  .trigger {
+    display: none;
+  }
+  
+  .nav-trigger:checked ~ .trigger {
+    display: flex;
+  }
+}
