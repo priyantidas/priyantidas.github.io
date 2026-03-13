@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+{% if page.title %}
+  <title>{{ page.title }} | {{ site.title | escape }}</title>
+{% else %}
+  <title>{{ site.title | escape }}</title>
+{% endif %}
+{% if site.description %}
+  <meta name="description" content="{{ site.description | escape }}">
+{% endif %}
+{% if page.excerpt %}
+  <meta name="description" content="{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+{% endif %}
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+{% if site.twitter.username %}
+  <meta name="twitter:site" content="@{{ site.twitter.username | replace:'@','' }}">
+  <meta name="twitter:creator" content="@{{ site.twitter.username | replace:'@','' }}">
+{% endif %}
+<meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+<meta property="og:type" content="{{ page.type | default: 'website' | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}{% else %}{{ site.description | escape }}{% endif %}">
+{% if page.image %}
+  <meta property="og:image" content="{{ page.image | absolute_url }}">
+{% endif %}
